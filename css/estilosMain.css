@@ -1,0 +1,123 @@
+:root{
+
+    --navColor: #e0aaff;
+    --segundoColor: #B892FF;
+    --fuenteColor: #45425A;
+    --colorSpan: #A40E4C;
+    --backNav: #dec9e9;
+    --fondoMain: #f3f3f7;
+    --imgback: #d2a5ec2c;
+    --fuenteNormal:'Oswald', sans-serif;
+    --fuenteCursiva: 'Dancing Script', cursive;
+}
+
+.main_seccion{
+    background-color: var(--fondoMain);
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 0 7px rgba(0, 0, 0, .3) ;
+}
+.main_seccion h1{
+    text-align: center;
+    font-family: var(--fuenteNormal);
+    font-size: 40px;
+    text-transform: uppercase;
+    color: var(--fuenteColor);
+    margin-bottom: 20px;
+}
+.main_seccion h1 span{
+    color: var(--colorSpan);
+    /* font-size: 35px; */
+    font-family: var(--fuenteNormal);
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    width: 100%;
+    gap: 2rem;
+    padding: 10px;
+}
+.grid .producto {
+    background-color: var(--imgback);
+    border-radius: 13px;
+    display: flex;
+    width: 100%;
+    padding: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.grid .producto img{
+    padding: 10px;
+    border-radius: 20px;
+    transition: all 0.5s;
+}
+.grid .producto img:hover{
+    border-radius: 30px;
+    transform: scale(1.1);
+}
+.informacion{
+    margin-top: 10px;
+}
+.informacion .nombre{
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.informacion .precio{
+    text-align: center;
+}
+.informacion .precio,
+.informacion .nombre{
+    cursor: default;
+}
+.producto a .comprar{
+    color: var(--colorSpan);
+    font-weight: bold;
+    margin: 15px;
+    background-color: #f2f2f2;
+    padding: 5px 20px;
+    border-radius: 10px;
+    
+}
+.producto a .comprar:hover{
+    background-color: var(--colorSpan);
+    color: #f2f2f2;
+    transition: all .5s ease;
+}
+
+
+
+@media screen and (max-width: 858px){
+    .grid{
+        gap: 1rem;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .grid .producto{
+        min-width: 100%;
+    }
+    .grid .producto img{
+        max-width: 100%;
+        padding: 0px;
+        border-radius: 15px;
+    }
+    .informacion .precio,
+    .informacion .nombre{
+    cursor: auto;
+    font-weight: normal;
+    }
+    .informacion{
+        margin-top: 5px;
+    }
+    .main_seccion h1{
+        padding-top: 10px;
+        font-size: 1.6rem;
+    }
+    .comprar{
+        text-align: center;
+    }
+    
+}
